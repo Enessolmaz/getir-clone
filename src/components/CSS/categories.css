@@ -1,0 +1,11 @@
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.typo-categories{
+  font-size: 20px !important;
+  align-items: flex-start;
+  text-align: center !important;
+  
+}
