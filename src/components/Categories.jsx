@@ -9,7 +9,7 @@ import { CardActionArea } from '@mui/material';
 
 function Categories() {
   return (
-    <div className='container'>
+    <div className='container-lg'>
         <div className="d-grid">
         <h6>Kategoriler</h6>
           <div className="categories ms-5">

@@ -1,1 +1,1 @@
-<h1 align="center">getiriyorum</h1>
+<h1 align="center">Getirdim</h1>
