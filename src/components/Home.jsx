@@ -1,26 +1,23 @@
+import * as React from "react";
+import Categories from "./Categories";
 
-import * as React from 'react';
-import Categories from './Categories';
-import Footer from './Footer';
-import Header from './Header';
-import MobileApp from './MobileApp';
-import Slide from "./Slide"
+
+import MobileApp from "./MobileApp";
+import Slide from "./Slide";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageCategories from "./PageCategories";
 
 function Home() {
   return (
-   
-
     <div>
-      <Header/>
-      <Slide/>
-      <Categories/>
-  
-      {/* Yap */}
+
+
+      <Slide />
+      <Categories />
+      <MobileApp />
       
-      <MobileApp/>
-      <Footer/>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
