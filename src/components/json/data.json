@@ -1,70 +1,80 @@
 [
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
-    "title": "Yeni Ürünler"
+    "title": "Hepsi",
+    "category" : "Hepsi"
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/f66f92ea-f680-4dd4-808b-8f8a71709a86.jpeg",
-    "title": "Su & İçecek"
+    "title": "Su & İçecek",
+    "category": "Su & İçecek"
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/d43a0396-b588-4666-ac43-af4b3159fee2.jpeg",
-    "title": "Meyve & Sebze"
+    "title": "Meyve & Sebze",
+    "category": "Meyve & Sebze"
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/6814548a-24f2-4ba2-9762-7ca3e96a3d40.jpeg",
-    "title": "Fırından"
+    "title": "Fırından",
+    "category": "Fırından"
+
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/4c2530e6-d2d2-4a77-96a0-917f16165f57.jpeg",
-    "title": "Temel Gıda"
+    "title": "Temel Gıda",
+    "category": "Temel Gıda"
+  
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/8393d053-6478-410a-a234-d1a914185b35.jpeg",
-    "title": "Atıştırmalık"
+    "title": "Atıştırmalık",
+    "category": "Atıştırmalık"
+    
   },
   {
     "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
-    "title": "Dondurma"
+    "title": "Dondurma",
+    "category": "Dondurma"
+    
   },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/f66f92ea-f680-4dd4-808b-8f8a71709a86.jpeg",
-    "title": "Süt Ürünleri"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/d43a0396-b588-4666-ac43-af4b3159fee2.jpeg",
-    "title": "Kahvaltılık"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/b01619f2-e12e-4777-85a2-5727abb62d51.jpeg",
-    "title": "Yiyecek"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/c594be17-998d-475e-91a5-89924798a27d.jpeg",
-    "title": "Fit & Form"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
-    "title": "Dondurma"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/f66f92ea-f680-4dd4-808b-8f8a71709a86.jpeg",
-    "title": "Süt Ürünleri"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/d43a0396-b588-4666-ac43-af4b3159fee2.jpeg",
-    "title": "Kahvaltılık"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
-    "title": "Dondurma"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/f66f92ea-f680-4dd4-808b-8f8a71709a86.jpeg",
-    "title": "Süt Ürünleri"
-  },
-  {
-    "img": "https://market-product-images-cdn.getirapi.com/category/d43a0396-b588-4666-ac43-af4b3159fee2.jpeg",
-    "title": "Kahvaltılık"
-  }
-]
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
+      "title": "Yeni Ürünler",
+      "category" : "Yeni Ürünler"
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/f66f92ea-f680-4dd4-808b-8f8a71709a86.jpeg",
+      "title": "Su & İçecek",
+      "category": "Su & İçecek"
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/d43a0396-b588-4666-ac43-af4b3159fee2.jpeg",
+      "title": "Meyve & Sebze",
+      "category": "Meyve & Sebze"
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/6814548a-24f2-4ba2-9762-7ca3e96a3d40.jpeg",
+      "title": "Fırından",
+      "category": "Fırından"
+  
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/4c2530e6-d2d2-4a77-96a0-917f16165f57.jpeg",
+      "title": "Temel Gıda",
+      "category": "Temel Gıda"
+    
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/8393d053-6478-410a-a234-d1a914185b35.jpeg",
+      "title": "Atıştırmalık",
+      "category": "Atıştırmalık"
+      
+    },
+    {
+      "img": "https://market-product-images-cdn.getirapi.com/category/e8b802e6-7987-486f-bf53-a9720c698a98.jpg",
+      "title": "Dondurma",
+      "category": "Dondurma"
+      
+    }
+  ]

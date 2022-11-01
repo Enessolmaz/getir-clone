@@ -1,11 +1,51 @@
-.categories{
+.categories {
   display: flex;
   flex-wrap: wrap;
 }
 
-.typo-categories{
+.typo-categories {
   font-size: 20px !important;
   align-items: flex-start;
   text-align: center !important;
+}
+
+.category {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(93 62 188 / 10%) 0px 6px 16px;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: 200ms;
   
+}
+.category img {
+  width: 35px;
+}
+.category:hover {
+  background-color: #f3f0fe;
+}
+
+.list-products {
+  display: flex;
+  flex-wrap: wrap;
+  height: max-content
+}
+
+.list-products .card {
+  width: 125px;
+  height: max-content;
+  text-align: center;
+  align-items: center;
+  margin: 5px;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.list-products .card:hover{
+  background-color: #f3f0fe;
+}
+
+.card .img {
+  width: 50px;
 }

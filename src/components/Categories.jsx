@@ -6,7 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Categories() {
   return (
@@ -15,7 +15,7 @@ function Categories() {
         <h6>Kategoriler</h6>
         <div className="categories ms-5">
           {categoriesData.map((item, index) => (
-            <NavLink key={index} to="/categories" style={{ textDecoration: "none" }}>
+            <NavLink key={index} to={`/categories`} style={{ textDecoration: "none" }}>
               <Card
                 sx={{ width: 150, margin: "15px 25px 10px 0", height: 120 }}
               >
