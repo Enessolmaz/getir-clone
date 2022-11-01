@@ -8,9 +8,9 @@ function MobileApp() {
           <h6>Kampanyalar</h6>
           <div className="offer">
             <img
-              src="https://cdn.getir.com/misc/62a0ca37c43b9c36436ef4f4_banner_tr_1654704721813.png"
+              srcSet="https://cdn.getir.com/misc/62a0ca37c43b9c36436ef4f4_banner_tr_1654704721813.png"
               alt=""
-              srcset=""
+              
               style={{
                 height: "350px",
                 width: "100%",
@@ -20,9 +20,9 @@ function MobileApp() {
           </div>
           <div className="mobileGetir mt-3">
             <img
-              src="https://cdn.r10.net/editor/94802/1484008395.jpeg"
+              srcSet="https://cdn.r10.net/editor/94802/1484008395.jpeg"
               alt=""
-              srcset=""
+              
               style={{
                 height: "400px",
                 width: "100%",
@@ -41,9 +41,9 @@ function MobileApp() {
                 }}
               >
                 <img
-                  src="https://getir.com/_next/static/images/intro-in-minutes-a7a9238a73013642a6597c4db06653c1.svg"
+                  srcSet="https://getir.com/_next/static/images/intro-in-minutes-a7a9238a73013642a6597c4db06653c1.svg"
                   alt=""
-                  srcset=""
+                 
                   style={{
                     width: "125px",
                     margin: "auto",
@@ -63,9 +63,9 @@ function MobileApp() {
                 }}
               >
                 <img
-                  src="https://getir.com/_next/static/images/intro-market-courier-34cd8b0ca1d547580d506566edfacf8d.svg"
+                  srcSet="https://getir.com/_next/static/images/intro-market-courier-34cd8b0ca1d547580d506566edfacf8d.svg"
                   alt=""
-                  srcset=""
+                  
                   style={{
                     width: "125px",
                     margin: "auto",
@@ -85,9 +85,9 @@ function MobileApp() {
                 }}
               >
                 <img
-                  src="https://getir.com/_next/static/images/intro-discount-6248544cb695830a2e25debd3c0f3d29.svg"
+                  srcSet="https://getir.com/_next/static/images/intro-discount-6248544cb695830a2e25debd3c0f3d29.svg"
                   alt=""
-                  srcset=""
+                  
                   style={{
                     width: "125px",
                     margin: "auto",

@@ -15,7 +15,7 @@ html {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 9;
 }
 .header-flex a:first-child {
   background-color: #6549b8;
@@ -80,7 +80,7 @@ html {
   width: 75%;
 }
 
-.ayDoorInMinutes {
+.minutesInYourDoor {
   position: absolute;
   z-index: 1;
   color: white;

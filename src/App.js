@@ -8,21 +8,16 @@ import PageCategories from './components/PageCategories';
 import { useState } from 'react';
 import products from "./components/json/products.json";
 
-
-
 function App() {
 
   const [menuItem, setMenuItem] = useState(products);
-
-
-
 
   const filter = (button) => {
     if (button === 'Hepsi') {
       setMenuItem(products);
       return;
     }
-
+    
     const filteredData = products.filter(item => item.category === button);
     setMenuItem(filteredData)
   }
