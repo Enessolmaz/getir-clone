@@ -29,9 +29,9 @@ function App() {
       <BrowserRouter>
         <Header />
          <Routes>
-          <Route path='/home' element={<Home products={menuItem} />} />
-          <Route path="/categories" element={<PageCategories filter={filter} products={menuItem} />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='/' element={<Home products={menuItem} />} />
+          <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
