@@ -59,6 +59,11 @@
   transition: 500ms;
 }
 
+.categoryText{
+  color: #7048ff;
+  font-weight: 600;
+}
+
 span input{
   display:inline-block;
   transition: 500ms;
@@ -73,5 +78,4 @@ span input{
 }
  span input:focus{
   width: 27vh;
-  
 }

@@ -7,18 +7,20 @@ import Footer from "./components/Footer"
 import PageCategories from './components/PageCategories';
 import { useState } from 'react';
 import products from "./components/json/products.json";
+import NotFound from './components/NotFound';
 
 function App() {
 
   const [menuItem, setMenuItem] = useState(products);
+ 
 
   const filter = (button) => {
     if (button === 'Hepsi') {
       setMenuItem(products);
       return;
     }
-    
-    const filteredData = products.filter(item => item.category === button);
+
+   const filteredData = products.filter(item => item.category === button);
     setMenuItem(filteredData)
   }
 
@@ -28,7 +30,8 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-          <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
+          <Route path={`categories`} element={<PageCategories filter={filter} products={menuItem} />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

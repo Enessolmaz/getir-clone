@@ -31,7 +31,7 @@ function PageCategories({ products, filter }) {
     );
   }
 
-  // :DDDDDDD
+  
   let newValue = products.filter((item) => {
     return item.title.toLowerCase().includes(inputValue);
   });
@@ -43,12 +43,14 @@ function PageCategories({ products, filter }) {
           style={{ width: 400, borderRadius: "6px" }}
           srcSet="https://cdn.getir.com/misc/62a0ca37c43b9c36436ef4f4_banner_tr_1654704721813.png"
           alt=""
-          
         />
 
         <div className=" d-flex align-items-center">
           <h6 className="mt-4 col-3">
-            Kategoriler {category === "" ? " " : " > " + category}
+            Kategoriler{" "}
+            <span className="categoryText">
+              {category === "" ? " " : " > " + category}
+            </span>
           </h6>
           <span className="col-6" style={{ position: "relative" }}>
             <input
@@ -65,7 +67,7 @@ function PageCategories({ products, filter }) {
               return (
                 <span
                   key={index}
-                  className="category d-flex" 
+                  className="category d-flex"
                   onClick={() => {
                     filter(item.category);
                     setCategory(item.category);
