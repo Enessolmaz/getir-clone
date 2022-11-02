@@ -30,7 +30,7 @@ function App() {
         <Header />
          <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-          <Route path={`categories`} element={<PageCategories filter={filter} products={menuItem} />} />
+          <Route path="/categories" element={<PageCategories filter={filter} products={menuItem} />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
         <Footer />
