@@ -36,7 +36,6 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     return item.title.toLowerCase().includes(inputValue);
   });
 
-  // const basketItem = basket.find(item => item.id === )
 
   const addBasket = (product) => {
     let basketProduct = {
@@ -46,7 +45,6 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
       name: product.title,
     };
     const checkBasket = basket.find((item) => item.id === product.id);
-    // eğer varsa ürün daha önce eklenmiş demektir
     if (checkBasket) {
       checkBasket.amount += 1;
       setBasket([
