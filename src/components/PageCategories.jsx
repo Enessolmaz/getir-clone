@@ -162,8 +162,8 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                   </div>
                 ) : (
                   <button className="disabledBtn mt-1" disabled={true}>
-                    {" "}
-                    Ödeme için Giriş Yap{" "}
+                    
+                    Ödeme için Giriş Yap
                   </button>
                 )}
                 <span className="text-center">
