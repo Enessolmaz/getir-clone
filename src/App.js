@@ -21,8 +21,6 @@ function App() {
       return acc + (item.amount * (products.find(product => product.id === item.id).price))
     }, 0)
     )
-    console.log(basket)
-
   }, [basket])
 
 
