@@ -51,7 +51,7 @@ function App() {
               filter={filter}
               products={menuItem}
             />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='/' element={<Home />} />
           <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
           <Route path='*' element={<NotFound />} />
 
