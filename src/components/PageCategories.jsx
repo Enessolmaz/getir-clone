@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import data from "./json/data.json";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
+import CancelIcon from "@mui/icons-material/Cancel";
 
-function PageCategories({ products, filter }) {
+function PageCategories({ products, filter, basket, setBasket, total }) {
   const [category, setCategory] = useState("");
   const [inputValue, setInputValue] = useState("");
 
@@ -12,7 +13,7 @@ function PageCategories({ products, filter }) {
     setInputValue(value.toLowerCase());
   };
 
-  let filterItems = products.filter((item) =>
+  let product = products.filter((item) =>
     item.title.toLowerCase().includes(inputValue)
   );
 
@@ -31,10 +32,47 @@ function PageCategories({ products, filter }) {
     );
   }
 
-  
   let newValue = products.filter((item) => {
     return item.title.toLowerCase().includes(inputValue);
   });
+
+  // const basketItem = basket.find(item => item.id === )
+
+  const addBasket = (product) => {
+    let basketProduct = {
+      id: product.id,
+      amount: 1,
+      img: product.img,
+      name: product.title,
+    };
+    const checkBasket = basket.find((item) => item.id === product.id);
+    // eğer varsa ürün daha önce eklenmiş demektir
+    if (checkBasket) {
+      checkBasket.amount += 1;
+      setBasket([
+        ...basket.filter((item) => item.id !== product.id),
+        checkBasket,
+      ]);
+    } else {
+      setBasket([...basket, basketProduct]);
+    }
+  };
+
+  const removeBasket = (product) => {
+    const currentBasket = basket.find((item) => item.id === product.id);
+
+    const basketWithoutCurrent = basket.filter(
+      (item) => item.id !== product.id
+    );
+
+    currentBasket.amount -= 1;
+    if (currentBasket.amount === 0) {
+      currentBasket.amount += 1;
+      setBasket([...basketWithoutCurrent]);
+    } else {
+      setBasket([...basketWithoutCurrent, currentBasket]);
+    }
+  };
 
   return (
     <div>
@@ -81,10 +119,11 @@ function PageCategories({ products, filter }) {
           </div>
           <div className="list-products mx-auto col-6">
             {newValue.length > 0
-              ? filterItems.map((item, index) => {
+              ? product.map((item, index) => {
                   return (
                     <div className="card" key={index}>
                       <AddCircleOutlinedIcon
+                        onClick={() => addBasket(item)}
                         sx={{
                           position: "absolute",
                           transition: "150ms",
@@ -109,8 +148,55 @@ function PageCategories({ products, filter }) {
                 })
               : notFound()}
           </div>
-          <div className="col-3  bg-success text-center">
-            <h1>Sepet</h1>
+          <div className="col-3 mainBasket">
+            <div className="showBasket">
+              <div className="d-grid">
+                {basket.length < 1 ? (
+                  <div>
+                    <img
+                      style={{ width: "100%", height : 250 }}
+                      alt="kkkkk"
+                      srcSet="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-3613108-3020773.png"
+                    />
+                    <p className="text-center" style={{color : "#4c3398"}}>
+                      <b>Lütfen Sepete Ürün Ekle...</b>
+                    </p>
+                  </div>
+                ) : (
+                  <button className="disabledBtn mt-1" disabled={true}>
+                    {" "}
+                    Ödeme için Giriş Yap{" "}
+                  </button>
+                )}
+                <span className="text-center">
+                  {total > 0 ? <b>Toplam tutar : {total}₺ </b> : " "}
+                </span>
+              </div>
+              {basket.map((item) => (
+                <div
+                  className="basketCard mx-auto"
+                  key={item.id}
+                  CloseIcon
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    height: "100px",
+                    boxShadow: "rgba(99, 48, 252, 0.1) 0px 6px 16px",
+                  }}
+                >
+                  <div className="cardContent">
+                    <div className="x">
+                      <CancelIcon onClick={() => removeBasket(item)} />
+                    </div>
+
+                    <span>
+                      <b>{item.amount} </b> adet {item.name}
+                    </span>
+                    <img style={{ width: 45 }} alt="n" src={item.img} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

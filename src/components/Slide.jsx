@@ -23,7 +23,7 @@ function Slide() {
     infinite: true,
     slidesToShow: 1,
     autoplay: true,
-    speed: 1000,
+    speed: 500,
     autoplaySpeed: 3000,
     cssEase: "linear",
     nextArrow: <HiddenArrow />,

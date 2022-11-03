@@ -79,3 +79,55 @@ span input{
  span input:focus{
   width: 27vh;
 }
+
+.mainBasket{
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(99, 48, 252, 0.1) 0px 6px 16px;
+  border-radius: 4px;
+}
+
+.basketCard{
+  height: 100px;
+  width: max-content;
+  background-color: #fcfbff54;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+
+  border-radius: 6px;
+  transition: 150ms;
+}
+.basketCard:hover{
+  background-color: #e9e3ff54;
+}
+
+.cardContent{  
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.x{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+  transition: 200ms;
+}
+.x:hover{
+  background-color: #bfcddb;
+  
+}
+
+.disabledBtn{
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 5px;
+  background-color: #4c3398 !important;
+  color: #ffd300 !important;
+  cursor: pointer;
+}

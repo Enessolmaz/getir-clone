@@ -5,14 +5,26 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer"
 import PageCategories from './components/PageCategories';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import products from "./components/json/products.json";
 import NotFound from './components/NotFound';
 
 function App() {
 
   const [menuItem, setMenuItem] = useState(products);
- 
+  const [basket, setBasket] = useState([])
+  const [total, setTotal] = useState(0)
+
+
+  useEffect(() => {
+    setTotal(basket.reduce((acc, item) => {
+      return acc + (item.amount * (products.find(product => product.id === item.id).price))
+    }, 0)
+    )
+    console.log(basket)
+
+  }, [basket])
+
 
   const filter = (button) => {
     if (button === 'Hepsi') {
@@ -20,7 +32,9 @@ function App() {
       return;
     }
 
-   const filteredData = products.filter(item => item.category === button);
+
+
+    const filteredData = products.filter(item => item.category === button);
     setMenuItem(filteredData)
   }
 
@@ -30,8 +44,24 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-          <Route path={`categories`} element={<PageCategories filter={filter} products={menuItem} />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path="/categories" element={
+            <PageCategories
+
+              basket={basket}
+              setBasket={setBasket}
+              total={total}
+
+
+
+
+
+              filter={filter}
+              products={menuItem}
+
+
+
+            />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
