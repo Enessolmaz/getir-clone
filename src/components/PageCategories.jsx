@@ -21,8 +21,8 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     return (
       <div className="notInput mx-auto text-center">
         <img
-          style={{ width: "35vw" }}
-          srcSet="https://www.pngitem.com/pimgs/m/164-1646974_error-image-oops-looks-like-the-page-is.png"
+          style={{ width: "33vw" }}
+          srcSet="https://images.all-free-download.com/images/graphicwebp/error_404_page_not_found_6845510.webp"
           alt=""
         />
         <p>
