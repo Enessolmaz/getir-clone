@@ -30,8 +30,6 @@ function App() {
       return;
     }
 
-
-
     const filteredData = products.filter(item => item.category === button);
     setMenuItem(filteredData)
   }
@@ -42,7 +40,6 @@ function App() {
         <Header />
          <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-
           <Route path="/categories" element={
             <PageCategories
               basket={basket}
@@ -51,10 +48,8 @@ function App() {
               filter={filter}
               products={menuItem}
             />} />
-          <Route path='/' element={<Home />} />
           <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
           <Route path='*' element={<NotFound />} />
-
         </Routes>
         <Footer />
       </BrowserRouter>
