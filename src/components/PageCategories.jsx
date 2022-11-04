@@ -21,8 +21,8 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     return (
       <div className="notInput mx-auto text-center">
         <img
-          style={{ width: "35vw" }}
-          srcSet="https://www.pngitem.com/pimgs/m/164-1646974_error-image-oops-looks-like-the-page-is.png"
+          style={{ width: "33vw" }}
+          srcSet="https://images.all-free-download.com/images/graphicwebp/error_404_page_not_found_6845510.webp"
           alt=""
         />
         <p>
@@ -36,7 +36,6 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     return item.title.toLowerCase().includes(inputValue);
   });
 
-  // const basketItem = basket.find(item => item.id === )
 
   const addBasket = (product) => {
     let basketProduct = {
@@ -46,7 +45,6 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
       name: product.title,
     };
     const checkBasket = basket.find((item) => item.id === product.id);
-    // eğer varsa ürün daha önce eklenmiş demektir
     if (checkBasket) {
       checkBasket.amount += 1;
       setBasket([
@@ -164,8 +162,8 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                   </div>
                 ) : (
                   <button className="disabledBtn mt-1" disabled={true}>
-                    {" "}
-                    Ödeme için Giriş Yap{" "}
+                    
+                    Ödeme için Giriş Yap
                   </button>
                 )}
                 <span className="text-center">

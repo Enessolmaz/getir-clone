@@ -21,8 +21,6 @@ function App() {
       return acc + (item.amount * (products.find(product => product.id === item.id).price))
     }, 0)
     )
-    console.log(basket)
-
   }, [basket])
 
 
@@ -31,8 +29,6 @@ function App() {
       setMenuItem(products);
       return;
     }
-
-
 
     const filteredData = products.filter(item => item.category === button);
     setMenuItem(filteredData)
@@ -44,7 +40,6 @@ function App() {
         <Header />
          <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-
           <Route path="/categories" element={
             <PageCategories
 
@@ -54,10 +49,8 @@ function App() {
               filter={filter}
               products={menuItem}
             />} />
-          <Route path='/*' element={<NotFound />} />
-          <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
+//           <Route path="categories" element={<PageCategories filter={filter} products={menuItem} />} />
           <Route path='*' element={<NotFound />} />
-
         </Routes>
         <Footer />
       </BrowserRouter>
