@@ -48,7 +48,7 @@ function App() {
               filter={filter}
               products={menuItem}
             />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
