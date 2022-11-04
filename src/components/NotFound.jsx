@@ -1,8 +1,10 @@
 import React from "react";
+import {NavLink} from "react-router-dom"
 
 function NotFound() {
   return (
-    <div
+    <NavLink to="*">
+      <div
       className="d-flex justify-content-center"
       style={{ background: "#fff",}}
     >
@@ -14,6 +16,7 @@ function NotFound() {
         srcSet="https://static.vecteezy.com/ti/vecteur-libre/t1/248366-erreur-404-page-web-indisponible-fichier-non-trouve-concept-commercial-gratuit-vectoriel.jpg"
       />
     </div>
+    </NavLink>
   );
 }
 
