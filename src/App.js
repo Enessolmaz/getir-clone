@@ -40,7 +40,7 @@ function App() {
         <Header />
          <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-          <Route path="/categories" element={
+          <Route path="/adad" element={
             <PageCategories
               basket={basket}
               setBasket={setBasket}
