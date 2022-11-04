@@ -47,6 +47,7 @@ function App() {
 
           <Route path="/categories" element={
             <PageCategories
+
               basket={basket}
               setBasket={setBasket}
               total={total}
