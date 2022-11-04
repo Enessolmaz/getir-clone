@@ -38,9 +38,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-         <Routes>
+        <Routes>
           <Route path='/' element={<Home products={menuItem} />} />
-          <Route path="/adad" element={
+          <Route path="/categories" element={
             <PageCategories
               basket={basket}
               setBasket={setBasket}
@@ -48,7 +48,7 @@ function App() {
               filter={filter}
               products={menuItem}
             />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>

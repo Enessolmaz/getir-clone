@@ -15,7 +15,7 @@ function Categories() {
         <h6>Kategoriler</h6>
         <div className="categories ms-5">
           {categoriesData.map((item, index) => (
-            <NavLink key={index} to={`/adad`} style={{ textDecoration: "none" }}>
+            <NavLink key={index} to={`/categories`} style={{ textDecoration: "none" }}>
               <Card
                 sx={{ width: 150, margin: "15px 25px 10px 0", height: 120 }}
               >
