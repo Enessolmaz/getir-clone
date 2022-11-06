@@ -29,7 +29,7 @@
 
 .list-products {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   
   height: max-content;
@@ -145,7 +145,7 @@ span input{
   .category {
     display: flex;
     width: max-content;
-    justify-content: start;
+    justify-content: flex-start;
     text-align: start;
     border: 1px solid #4c3398;
     border-radius: 15px;
@@ -156,13 +156,12 @@ span input{
     display: flex;
     flex-wrap: wrap;
     word-wrap:break-word;
-    text-overflow:ellipsis;
     font-size: 2vw;
   }
   .list-products{
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: flex-start;
     width: 100%;
   }
  
@@ -181,7 +180,6 @@ span input{
   .categories .card{
     display: flex;
     justify-content: center;
-   
     width: max-content;
     border-radius: 25px;
    height: 40px;
