@@ -12,7 +12,7 @@ function MobileApp() {
               alt=""
               
               style={{
-                height: "350px",
+                height: "30vw",
                 width: "100%",
                 borderRadius: "12px",
               }}
@@ -24,7 +24,7 @@ function MobileApp() {
               alt=""
               
               style={{
-                height: "400px",
+                height: "30vw",
                 width: "100%",
                 borderRadius: "12px",
               }}

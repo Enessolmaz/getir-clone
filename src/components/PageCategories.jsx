@@ -36,7 +36,6 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     return item.title.toLowerCase().includes(inputValue);
   });
 
-
   const addBasket = (product) => {
     let basketProduct = {
       id: product.id,
@@ -74,16 +73,16 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
 
   return (
     <div>
-      <div className="container-lg mt-2 justify-content-around">
+      <div className="container-lg mt-2 ">
         <img
-          style={{ width: 400, borderRadius: "6px" }}
+          style={{ width: "30vw", borderRadius: "6px" }}
           srcSet="https://cdn.getir.com/misc/62a0ca37c43b9c36436ef4f4_banner_tr_1654704721813.png"
           alt=""
         />
 
         <div className=" d-flex align-items-center">
           <h6 className="mt-4 col-3">
-            Kategoriler{" "}
+            Kategoriler
             <span className="categoryText">
               {category === "" ? " " : " > " + category}
             </span>
@@ -98,7 +97,7 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
         </div>
 
         <div className="row mx-auto">
-          <div className="product-categories mx-auto col-3 d-grid">
+          <div className="product-categories col-3">
             {data.map((item, index) => {
               return (
                 <span
@@ -109,12 +108,13 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                     setCategory(item.category);
                   }}
                 >
-                  <img alt="" srcSet={item.img} />
-                  <h6 className="ms-3 mt-1"> {item.title} </h6>
+                  <img alt="" srcSet={item.img}/>
+                  <span className="mt-1"> {item.title} </span>
                 </span>
               );
             })}
           </div>
+
           <div className="list-products mx-auto col-6">
             {newValue.length > 0
               ? product.map((item, index) => {
@@ -146,23 +146,38 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                 })
               : notFound()}
           </div>
-          <div className="col-3 mainBasket">
+          <div className="col-3 mainBasket mx-auto">
+            <div class="progress mt-1">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style={{
+                  background: "#4c3398",
+                  width: basket.length * 10 + "%",
+                }}
+                aria-label="Basic example"
+                aria-valuenow={filter.length}
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <b>{basket.length}</b>
+              </div>
+            </div>
             <div className="showBasket">
               <div className="d-grid">
                 {basket.length < 1 ? (
                   <div>
                     <img
-                      style={{ width: "100%", height : 250 }}
+                      style={{ width: "100%", height: 250 }}
                       alt="kkkkk"
                       srcSet="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-3613108-3020773.png"
                     />
-                    <p className="text-center" style={{color : "#4c3398"}}>
+                    <p className="text-center" style={{ color: "#4c3398" }}>
                       <b>Lütfen Sepete Ürün Ekle...</b>
                     </p>
                   </div>
                 ) : (
                   <button className="disabledBtn mt-1" disabled={true}>
-                    
                     Ödeme için Giriş Yap
                   </button>
                 )}

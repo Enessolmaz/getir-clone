@@ -4,9 +4,9 @@ import "./CSS/footer.css"
 
 function Footer() {
   return (
-    <div className="footer mt-5">
+    <div className="footer mt-5 w-100 ">
       <div className="container-lg mt-5">
-        <div className="footer-getir">
+        <div className="footer-getir w-100">
           <span>
             <h6>Getir'i indirin!</h6>
             <a

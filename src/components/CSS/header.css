@@ -147,3 +147,40 @@ html {
   background-color: #633adf !important;
   color: #ffd300 !important ;
 }
+
+@media screen and (max-width: 700px) {
+  .imgSection img{
+    background-position: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+  }
+  .left-content{
+    display: none;
+  }
+  .header-flex{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;  
+  }
+  .header-right{
+    display: none;
+  }
+  .right-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    position: absolute;
+   
+  }
+  .right-content .card{
+   display: none;
+  }
+  .offer img{
+    height: 10px
+  }
+}

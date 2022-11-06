@@ -17,6 +17,7 @@ function Categories() {
           {categoriesData.map((item, index) => (
             <NavLink key={index} to={`/categories`} style={{ textDecoration: "none" }}>
               <Card
+              className="card"
                 sx={{ width: 150, margin: "15px 25px 10px 0", height: 120 }}
               >
                 <CardActionArea>

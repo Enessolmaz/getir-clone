@@ -29,8 +29,11 @@
 
 .list-products {
   display: flex;
+  justify-content: start;
   flex-wrap: wrap;
-  height: max-content
+  
+  height: max-content;
+  
 }
 
 .list-products .card {
@@ -129,4 +132,65 @@ span input{
   padding: 5px;
   background-color: #4c3398 !important;
   color: #ffd300 !important;
+}
+
+
+@media screen and (max-width: 600px) {
+  .product-categories{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .category {
+    display: flex;
+    width: max-content;
+    justify-content: start;
+    text-align: start;
+    border: 1px solid #4c3398;
+    border-radius: 15px;
+    margin: 5px 5px;
+  }
+  .category span{
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap:break-word;
+    text-overflow:ellipsis;
+    font-size: 2vw;
+  }
+  .list-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 100%;
+  }
+ 
+  .list-products .card{
+    width: 75px;
+  }  
+  .mainBasket{
+    width: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  
+  .categories .card{
+    display: flex;
+    justify-content: center;
+   
+    width: max-content;
+    border-radius: 25px;
+   height: 40px;
+   margin: 5px;
+   border: 2px solid #4c3398;
+  
+  }
+  .categories .card img{
+    display: none;
+  }
+  
 }
