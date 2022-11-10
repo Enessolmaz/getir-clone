@@ -45,7 +45,7 @@ function MobileApp() {
                   alt=""
                  
                   style={{
-                    width: "125px",
+                    width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
                   }}
@@ -67,7 +67,7 @@ function MobileApp() {
                   alt=""
                   
                   style={{
-                    width: "125px",
+                    width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
                   }}
@@ -89,7 +89,7 @@ function MobileApp() {
                   alt=""
                   
                   style={{
-                    width: "125px",
+                    width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
                   }}

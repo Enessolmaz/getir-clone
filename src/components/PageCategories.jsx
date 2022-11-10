@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import data from "./json/data.json";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import CancelIcon from "@mui/icons-material/Cancel";
 
-function PageCategories({ products, filter, basket, setBasket, total }) {
+function PageCategories({ products, filter, basket, setBasket, total, setShowProduct }) {
   const [category, setCategory] = useState("");
   const [inputValue, setInputValue] = useState("");
+  
 
   const searchInput = (e) => {
     let value = e.target.value;
@@ -71,6 +72,11 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
     }
   };
 
+  let productHandler = (item) => {
+    setShowProduct(item);
+  };
+
+
   return (
     <div>
       <div className="container-lg mt-2 ">
@@ -108,7 +114,7 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                     setCategory(item.category);
                   }}
                 >
-                  <img alt="" srcSet={item.img}/>
+                  <img alt="" srcSet={item.img} />
                   <span className="mt-1"> {item.title} </span>
                 </span>
               );
@@ -119,7 +125,27 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
             {newValue.length > 0
               ? product.map((item, index) => {
                   return (
-                    <div className="card" key={index}>
+                    <div className="card" key={index}> 
+                    <div className="totalCard" style={{ display : "grid", width : "100%", height : "100%"}}>
+                    <NavLink
+                        to="/product"
+                        onClick={() => productHandler(item)}
+                        style={{ textDecoration : "none"}}
+                      >
+                        <div
+                        onClick={() => productHandler(item)}
+                          className="hover"
+                          style={{}}
+                        >
+                          <img className="img mt-4" srcSet={item.img} alt="kk" />
+                          <span>
+                            <h6 className="mt-3">{item.title}</h6>
+                            <h6>{item.brand}</h6>
+                            <h6 className="itemPrice">{item.price}₺</h6>
+                          </span>
+                        </div>
+                      </NavLink>
+                    </div>
                       <AddCircleOutlinedIcon
                         onClick={() => addBasket(item)}
                         sx={{
@@ -133,23 +159,15 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                           },
                         }}
                       />
-                      <div className="hover">
-                        <img className="img" srcSet={item.img} alt="kk" />
-                        <span>
-                          <h6 className="mt-3">{item.title}</h6>
-                          <h6>{item.brand}</h6>
-                          <h6 className="itemPrice">{item.price}₺</h6>
-                        </span>
-                      </div>
                     </div>
                   );
                 })
               : notFound()}
           </div>
           <div className="col-3 mainBasket mx-auto">
-            <div class="progress mt-1">
+            <div className="progress mt-1">
               <div
-                class="progress-bar"
+                className="progress-bar"
                 role="progressbar"
                 style={{
                   background: "#4c3398",
@@ -189,7 +207,7 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
                 <div
                   className="basketCard mx-auto"
                   key={item.id}
-                  CloseIcon
+                
                   style={{
                     width: "100%",
                     display: "flex",
@@ -214,6 +232,7 @@ function PageCategories({ products, filter, basket, setBasket, total }) {
         </div>
       </div>
       <Outlet />
+     
     </div>
   );
 }

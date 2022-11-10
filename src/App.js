@@ -8,13 +8,15 @@ import PageCategories from './components/PageCategories';
 import { useEffect, useState } from 'react';
 import products from "./components/json/products.json";
 import NotFound from './components/NotFound';
+import ProductPage from './components/ProductPage';
 
 function App() {
 
   const [menuItem, setMenuItem] = useState(products);
   const [basket, setBasket] = useState([])
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(0);
 
+  const [showProduct, setShowProduct] = useState();
 
   useEffect(() => {
     setTotal(basket.reduce((acc, item) => {
@@ -22,6 +24,8 @@ function App() {
     }, 0)
     )
   }, [basket])
+
+
 
 
   const filter = (button) => {
@@ -47,8 +51,11 @@ function App() {
               total={total}
               filter={filter}
               products={menuItem}
+              setShowProduct={setShowProduct}
+              
             />} />
-          <Route path='/*' element={<NotFound />} />
+          <Route path='/product' element={<ProductPage showProduct={showProduct} />} />
+          <Route path='/*' element={<NotFound/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
