@@ -12,7 +12,8 @@ function MobileApp() {
               alt=""
               
               style={{
-                height: "30vw",
+                maxHeight : "310px",
+                height: "27vw",
                 width: "100%",
                 borderRadius: "12px",
               }}
@@ -24,7 +25,8 @@ function MobileApp() {
               alt=""
               
               style={{
-                height: "30vw",
+                 maxHeight : "310px",
+                height: "27vw",
                 width: "100%",
                 borderRadius: "12px",
               }}
