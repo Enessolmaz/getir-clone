@@ -47,6 +47,7 @@ function MobileApp() {
                   alt=""
                  
                   style={{
+                          maxWidth: "150px",
                     width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
@@ -69,6 +70,7 @@ function MobileApp() {
                   alt=""
                   
                   style={{
+                          maxWidth: "150px",
                     width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
@@ -91,6 +93,7 @@ function MobileApp() {
                   alt=""
                   
                   style={{
+                             maxWidth: "150px",
                     width: "13vw",
                     margin: "auto",
                     objectFit: "contain",
