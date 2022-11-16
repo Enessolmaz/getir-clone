@@ -26,6 +26,7 @@ function ProductPage({ showProduct }) {
                 style={{
                       width: "11vw",
                       minWidth: "125px",
+                      maxHeight : "250px",
                       border: "2px solid rgb(203, 189, 255)",
                       borderRadius: "10px",
                 }}
