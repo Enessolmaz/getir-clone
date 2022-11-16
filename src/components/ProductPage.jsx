@@ -24,7 +24,7 @@ function ProductPage({ showProduct }) {
                 alt="none"
                 srcSet={product.img}
                 style={{
-                      width: "14vw",
+                      width: "11vw,
                       minWidth: "125px",
                       border: "2px solid rgb(203, 189, 255)",
                       borderRadius: "10px",
