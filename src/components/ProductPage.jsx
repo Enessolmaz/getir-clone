@@ -24,10 +24,10 @@ function ProductPage({ showProduct }) {
                 alt="none"
                 srcSet={product.img}
                 style={{
-                  width: "14vw",
-                  maxWidth: "190px",
-                  border: "2px solid #cbbdff",
-                  borderRadius: "10px",
+                      width: 14vw;
+                      min-width: 125px;
+                      border: 2px solid rgb(203, 189, 255);
+                      border-radius: 10px;
                 }}
               />
               <img
